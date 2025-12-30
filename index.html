@@ -264,7 +264,7 @@ const DATA = {
       content: `
         <div class="space-y-3 text-sm text-gray-600 dark:text-gray-300 mt-10">
            <ol class="list-decimal list-inside space-y-2">
-             <li>Staj yerini öğrenci kendisi bulur ve uygunluk onayı için komisyona bildirir.</li>
+             <li>Staj yerini öğrenci kendisi bulur ve uygunluk onayı için bölüm staj komisyonuna bildirir.</li>
              <li>Staj 1 ve Staj 2 aynı firmada yapılabilir. ANCAK: Farklı departmanlarda olmak zorundadır.</li>
              <li>Departman, bölüm müfredatıyla ilgili olmalıdır.</li>
              <li>Toplam staj süresi (Staj 1 + Staj 2) 40 gün olmalıdır.</li>
@@ -357,6 +357,13 @@ const DATA = {
                    </div>
                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
                </a>
+               <a href="staj-degerlendirme-formu.docx" class="flex items-center justify-between w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:bg-sky-50 dark:hover:bg-slate-700 transition-colors group text-left">
+                   <div class="flex items-center gap-2">
+                        <i data-lucide="download" class="w-4 h-4 text-sky-600 dark:text-sky-400"></i>
+                        <span class="text-xs font-semibold text-gray-700 dark:text-gray-200"> Staj Değerlendirme Formu</span>
+                   </div>
+                   <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
+               </a>
                
            </div>
         </div>
@@ -425,20 +432,6 @@ const DATA = {
                 <li class="txt-l">Her sayfa yetkili tarafından imzalanmalı ve kaşelenmelidir.</li>
             </ul>
         </div>
-      `
-    },
-    {
-      title: "Değerlendirme Formu",
-      icon: "book",
-      desc: "Bu form staj yeri tarafından iki suret olarak doldurulur. Bir sureti staj yerinde kalacak ve bir sureti de Üniversitemizin ilgili bölümüne gönderilir. İadeli taahhütlü posta yoluyla veya kapalı zarf içerisinde GİZLİDİR ibaresiyle öğrenciye elden teslim edilerek gönderilmelidir. Kaşenin eksik olmamasına dikkat ediniz..",
-      content: `
-      <a href="staj-degerlendirme-formu.docx" class="flex items-center justify-between w-full px-3 py-2 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg hover:bg-sky-50 dark:hover:bg-slate-700 transition-colors group text-left">
-                   <div class="flex items-center gap-2">
-                        <i data-lucide="download" class="w-4 h-4 text-sky-600 dark:text-sky-400"></i>
-                        <span class="text-xs font-semibold text-gray-700 dark:text-gray-200"> Staj Değerlendirme Formu</span>
-                   </div>
-                   <i data-lucide="chevron-right" class="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity"></i>
-               </a>
       `
     },
     {
@@ -740,13 +733,13 @@ lucide.createIcons();
 
 // UPDATED DATA: Step 6 is now a PDF example
 const GALLERY_STEPS = [
-    { type: 'img', src: "1.jpg", text: "1. OBS Giriş Ekranı: Kullanıcı bilgilerinizi giriniz." },
-    { type: 'img', src: "2.jpg", text: "2. Menüden 'Staj İşlemleri' sekmesini seçiniz." },
-    { type: 'img', src: "3.jpg", text: "3. Sağ üst köşedeki 'Yeni Başvuru' butonuna tıklayınız." },
-    { type: 'img', src: "4.jpg", text: "4. Firma ve tarih bilgilerini doldurunuz." },
-    { type: 'pdf', src: "ön basvuru form 1 5.pdf", text: "6. ÖRNEK FORM: Bu formun çıktısını alınız." },
-    { type: 'img', src: "6.jpg", text: "5. 'Kaydet' butonuna basarak işlemi tamamlayınız." },
-    { type: 'img', src: "7.jpg", text: "7. Islak imza süreçlerini tamamlayıp yükleyiniz." },
+    { type: 'img', src: "1.jpg", text: "1. OBS'ye girdikten sonra Başvuru işlemleri -> Kayıt Başvuruları butonuna tıklayın." },
+    { type: 'img', src: "2.jpg", text: "2. Menüden 'Staj Başvurusu' sekmesini seçiniz." },
+    { type: 'img', src: "3.jpg", text: "3. Bu alandaki bilgileri doldurduktan sonra 'Ön Başvuru Yap' butonuna tıklayınız." },
+    { type: 'img', src: "4.jpg", text: "4. Sağ alt köşedeki yeşil butona tıklayınız." },
+    { type: 'pdf', src: "ön basvuru form 1 5.pdf", text: "5. ÖRNEK FORM: Bu formun çıktısını alınız." },
+    { type: 'img', src: "6.jpg", text: "6. Firmanız formu imzaladıkdan sonra sarı butona tıkayınız." },
+    { type: 'img', src: "7.jpg", text: "7. Bu aşamadaki bilgileri eksiksiz doldurunuz vede kaydet butonuna tıklayınız." },
     { type: 'pdf', src: "stajBelge 8.pdf", text: "8. ÖRNEK FORM: Bu formun çıktısını alınız." },
 ];
 
@@ -812,6 +805,7 @@ document.addEventListener('keydown', (e) => {
 </script>
 </body>
 </html>
+
 
 
 
